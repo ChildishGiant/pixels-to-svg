@@ -1,0 +1,35 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>Pixels to SVG</title>
+    </head>
+
+    <body>
+        <h1>Pixels to SVG</h1>
+
+        <img src="refresh.svg" id="refresh" onclick="toggleOverlay();">
+        
+        <label for="uploader" id="uploadWrapper">
+            <input type="file" multiple id="uploader">
+            <img src="upload.svg">
+            <br>
+            <strong>Choose an image</strong>
+            or drag & drop here
+        </label>
+
+
+        <canvas id="testCanvas" style="display:none;"><a href="https://caniuse.com/#feat=canvas">I'm sorry, but you can't run this program with this browser.</a></canvas>
+
+            <!--  https://stackoverflow.com/questions/8669579/multiple-files-select-and-upload  -->
+            <!--  https://stackoverflow.com/questions/399486/open-the-save-image-dialog-using-jquery-javascript  -->
+        <svg id="svgImage"></svg>
+        <button style="display:none;" onclick="download()" id="downloadButton"> Download SVG </button>
+
+        <div id="footer">
+            Forked from <a href="https://codepen.io/tacode/pen/eMaqWG">tacode's "RGBA image to SVG pixel art"</a> codepen
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
