@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+
+  /* Dracula theme (https://github.com/dracula/dracula-theme) */
+  --background: #282a36;
+  --highlight: #44475a;
+  --foreground: #f8f8f2;
+  --comment: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+
+  
+  background: var(--background);
+  color: var(--foreground);
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+#svgImage {
+  width: 75vmin;
+  height: 75vmin;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#uploader {
+  display: none;
+}
+
+#uploadWrapper {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: var(--background);
+  color: var(--comment);
+  font-size: 1.5em;
+
+  transition: visibility 0s, opacity 0.3s linear;
+
+  user-select: none;
+}
+
+#uploadWrapper strong{ 
+  color: var(--foreground);
+  font-size: 1.2em;
+}
+
+#uploadWrapper img {
+  width: 30%;
+}
+
+#footer {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  text-align: center;
+  z-index: 2;
+  padding-bottom: 5px;
+}
+
+#downloadButton {
+  border: 5px solid var(--highlight);
+  border-radius:  10px;
+  background: none;
+  color: var(--foreground);
+  font-size: 2em;
+  margin: 0 auto;
+  margin-top: 1em;
+  font-weight: bold;
+}
+
+#refresh {
+  width: 7vmin;
+  position: absolute;
+  right: 1vmin;
+  top: 1vmin;
+}
+
+a {
+  color: var(--cyan);
+}
+
+a:visited {
+  color: var(--purple);
+}
